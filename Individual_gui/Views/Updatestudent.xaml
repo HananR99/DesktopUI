@@ -1,0 +1,197 @@
+﻿<Page x:Class="Individual_gui.Views.Updatestudent"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Individual_gui.Views"
+      xmlns:VM="clr-namespace:Individual_gui.VM"
+      mc:Ignorable="d" 
+      Background="Transparent"
+      Height="580" Width="1200"
+      Title="add">
+    <Page.DataContext>
+        <VM:ViewModel/>
+    </Page.DataContext>
+
+    <Grid Background="Transparent">
+        <DataGrid x:Name="StudentsDataGridView"
+                         
+                          ItemsSource="{Binding Student}"
+                          ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle}"
+                          RowStyle="{DynamicResource DataGridRowStyle}"  
+                          CellStyle="{DynamicResource DataGridCellStyle}" 
+                          Style="{DynamicResource DataGridStyle}"
+                          SelectedItem="{Binding Selectedstudent}" Margin="442,0,0,0" >
+
+            <DataGrid.Columns>
+
+
+                <DataGridTemplateColumn Header="Profile"
+                                        Width="80">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image  Source="{Binding ImgUrl}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+                <DataGridTextColumn Header="Full Name"
+                                    
+                                            Binding="{Binding FullName}" 
+                                            IsReadOnly="True" Width="*"/>
+
+
+
+                <DataGridTextColumn Header="Date of Birth" 
+                                            Binding="{Binding DoB}"
+                                            Width="*"
+                                            IsReadOnly="True" />
+
+                <DataGridTextColumn Header="GPA" 
+                                            Binding="{Binding Gpa}"
+                                            Width="*"
+                                            IsReadOnly="True" />
+
+                <DataGridTextColumn Header="Department" 
+                                            Binding="{Binding Department}"
+                                            Width="*"
+                                    
+                                            IsReadOnly="True"/>
+
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Border CornerRadius="10" BorderBrush="Transparent" BorderThickness="4">
+            
+            
+            <TextBox Text="{Binding Department}"  
+                FontSize="25"
+                FontWeight="Medium"
+                Background="Transparent"
+                FontFamily="Montserrat"                            
+                Foreground="Black"
+                CaretBrush="Black"
+               
+                BorderThickness="0,0,0,2"
+                Height="28"
+                VerticalContentAlignment="Center"
+                Margin="163,245,832,0"
+                Padding="5,0,0,0" VerticalAlignment="Top" />
+        </Border>
+        <Button  Command="{Binding updateCommand}"  Margin="84,354,938,170" 
+            x:Name="btnLogin"                          
+            BorderThickness="0"
+            Content="Update User"
+            Foreground="Black"
+            FontSize="12"
+            FontFamily="Montserrat"
+            Cursor="Hand"
+                 Style="{StaticResource mainbtn}" Click="btnLogin_Click"
+                           />
+
+        <TextBlock Text="Gpa"
+                   Background="Transparent"
+                FontSize="25"
+                FontWeight="Bold"
+                FontFamily="Montserrat"                             
+                Margin="16,187,1127,355">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                    
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock Text="First Name"
+                   Background="Transparent"
+                FontSize="25"
+                FontWeight="Bold"
+                FontFamily="Montserrat"                             
+                Margin="10,56,1062,486">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF080707" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+
+       
+
+        <TextBlock Text="Last Name"
+                   Background="Transparent"
+                FontSize="25"
+                FontWeight="Bold"
+                FontFamily="Montserrat"                             
+                Margin="11,125,1064,417">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF080707" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        
+        <TextBlock Text="Department"
+                   Background="Transparent"
+                FontSize="25"
+                FontWeight="Bold"
+                FontFamily="Montserrat"                             
+                Margin="16,252,1040,290">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF080707" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        
+        <TextBox Text="{Binding Firstname}"  
+                FontSize="25"
+                FontWeight="Medium"
+                 Background="Transparent"
+                FontFamily="Montserrat"                            
+                Foreground="Black"
+                CaretBrush="Black"
+                
+                BorderThickness="0,0,0,2"
+                Height="28"
+                VerticalContentAlignment="Center"
+                Margin="170,56,833,0"
+                Padding="5,0,0,0" VerticalAlignment="Top" >
+
+
+        </TextBox>
+        <TextBox Text="{Binding Lastname}"  
+            FontSize="25"
+            FontWeight="Medium"
+            Background="Transparent"
+            FontFamily="Montserrat"                            
+            Foreground="Black"
+            CaretBrush="Black"
+            
+            BorderThickness="0,0,0,2"
+            Height="28"
+            VerticalContentAlignment="Center"
+            Margin="166,125,837,0"
+            Padding="5,0,0,0" VerticalAlignment="Top" />
+        <TextBox Text="{Binding Gpa}"  
+            FontSize="25"
+            FontWeight="Medium"
+            Background="Transparent"
+            FontFamily="Montserrat"                            
+            Foreground="Black"
+            CaretBrush="Black"
+            
+            BorderThickness="0,0,0,2"
+            Height="28"
+            VerticalContentAlignment="Center"
+            Margin="166,187,837,0"
+            Padding="5,0,0,0" VerticalAlignment="Top" />
+
+    </Grid>
+
+</Page>

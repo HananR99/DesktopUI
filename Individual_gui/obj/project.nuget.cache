@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Qm13yMJdBvJkxM/yiBPvddgkhBfjveQ31qrmy1p52bfe5I8R5Vs0XbfuDcFfRosTB8io53AF08C+0GoS2fsEsw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\HANAN RAMZAN\\Desktop\\Desktop UI_EG_2020_3949\\Individual_gui\\Desktop_UI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HANAN RAMZAN\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
+    "C:\\Users\\HANAN RAMZAN\\.nuget\\packages\\mahapps.metro.iconpacks\\4.11.0\\mahapps.metro.iconpacks.4.11.0.nupkg.sha512",
+    "C:\\Users\\HANAN RAMZAN\\.nuget\\packages\\mahapps.metro.iconpacks.material\\4.11.0\\mahapps.metro.iconpacks.material.4.11.0.nupkg.sha512"
+  ],
+  "logs": []
+}
